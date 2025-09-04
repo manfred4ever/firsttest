@@ -1,0 +1,7 @@
+name: howareyou
+hosts: all
+gather_facts: false
+tasks:
+  - name: Print How Are You
+    ansible.builtin.debug:
+      msg: "How are you from Ansible!"
