@@ -22,7 +22,7 @@ jobs:
         run: |
           terraform init
           # Targeting only aws_vpc.firstVPC for initial one-time setup to avoid creating unintended resources.
-          terraform apply -target=aws_vpc.firstVPC
-          terraform apply -target=aws_vpc.firstVPC -auto-approve
+     
+          terraform apply -auto-approve
           
 
