@@ -1,0 +1,28 @@
+name: AWS Account Setup (One-time)
+
+on:
+  workflow_dispatch:  # Manual trigger only
+    inputs:
+      confirm:
+        description: 'Type "setup" to confirm account initialization'
+        required: true
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    if: github.event.inputs.confirm == 'setup'
+    
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+      
+      - name: Initialize AWS VPC with Terraform
+        # Remove or uncomment the following line if your Terraform files are in a subdirectory
+        working-directory: ./manually-execute-init-aws-account/
+        run: |
+          terraform init
+          # Targeting only aws_vpc.firstVPC for initial one-time setup to avoid creating unintended resources.
+          terraform apply -target=aws_vpc.firstVPC
+          terraform apply -target=aws_vpc.firstVPC -auto-approve
+          
+
