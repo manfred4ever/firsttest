@@ -28,8 +28,6 @@ jobs:
 
       - name: Terraform Plan
         run: terraform plan
-
-      # Uncomment below to apply changes automatically
-       - name: Terraform Apply
-         run: terraform apply -auto-approve
-   
+        
+      - name: Terraform Apply  # Correct
+        run: terraform apply -auto-approve
