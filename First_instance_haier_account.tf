@@ -13,7 +13,7 @@ resource "aws_instance" "aws_instance1" {
 }
      
 resource "tls_private_key" "AWS_instance1_key" {
-# Generates a secure private key using TLS protocol
+# Generates a secure private key using TLS protocol,haha
 algorithm = "RSA"
 rsa_bits  = 4096
 
