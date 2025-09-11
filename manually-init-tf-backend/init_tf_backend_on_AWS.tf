@@ -22,10 +22,10 @@ variable "aws_region" {
 }
 
 variable "bucket_name" {
-  description = "terraform_state_1"
+  description = "terraform_state_bucket name"
   type        = string
   # You MUST change this to a unique value
-  default     = "terraform-state-bucket-1"
+  default     = "mm-free-tier-terraform-state-bucket-20250911"
 }
 
 variable "environment" {
