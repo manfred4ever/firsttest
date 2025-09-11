@@ -26,7 +26,7 @@ jobs:
       
       - name: Initialize Terraform backend on AWS S3
         # Remove or uncomment the following line if your Terraform files are in a subdirectory
-        working-directory: ./manually-init-Terraform-backend/
+        working-directory: ./manually_init_tf_backend
         run: |
           
      
