@@ -5,7 +5,7 @@ on:
   push:
     paths:
       - 'First_instance_haier_account.tf'
-      - 'init_tf_backend_on_AWS.tf'
+      
 
       
 jobs:
