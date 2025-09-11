@@ -27,9 +27,8 @@ jobs:
       - name: Initialize AWS VPC with Terraform
         # Remove or uncomment the following line if your Terraform files are in a subdirectory
         working-directory: ./manually-execute-init-aws-account/
-        run: |
-          terraform init
-          # Targeting only aws_vpc.firstVPC for initial one-time setup to avoid creating unintended resources.
+
+         run:
      
           terraform apply -auto-approve
           
